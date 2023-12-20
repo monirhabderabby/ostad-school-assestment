@@ -24,29 +24,45 @@ Make sure your environment variable files are connnected to the mysql Database
 
 
 
-## API Reference
+## API Reference | Baseurl- http://localhost:3000
 
 #### Single User Registrati0on
 
 ```http
-  GET /api
+  POST /api/registration
 ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `/registration` | `string` | **Required**. Your API key |
 
-#### Get item
+#### Multiple User registration
 
 ```http
-  GET /api/items/${id}
+  POST /api/registration/all
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
+#### Update Student Information
 
-#### add(num1, num2)
+```http
+  PATCH /api/students/${id}
+```
 
-Takes two numbers and returns the sum.
+#### Delete Student Information
+
+```http
+  DELETE /api/students/${id}
+```
+
+#### Get Individual Student Information
+
+```http
+  GET /api/students/${id}
+```
+
+#### Get All Students
+
+```http
+  GET /api/students
+```
+
+
+
 
